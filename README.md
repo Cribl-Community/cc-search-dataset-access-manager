@@ -4,9 +4,9 @@ Grant, change, or remove Cribl Search dataset access for a member or a team from
 
 ## Summary
 
-Search Dataset Access Manager is a Cribl app for reviewing and updating Search dataset permissions. It helps users see who has direct access, change that access across every dataset, and save those changes with a confirmation that names the member or team.
+Search Dataset Access Manager gives Cribl Search administrators a bulk-edit workflow for dataset permissions. The standard Search sharing UI grants access one dataset at a time. This app reverses that workflow: select a member or team first, review their access across all datasets, apply the appropriate permissions to multiple datasets, and save the changes together.
 
-Use this app when dataset sharing is spread across many datasets and you want one place to update a member or a team.
+Use this app to manage a member's or team's dataset access from one place instead of updating each dataset individually.
 
 ## What This App Does
 
