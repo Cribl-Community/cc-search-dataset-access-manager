@@ -10,14 +10,14 @@ Use this app to manage a member's or team's dataset access from one place instea
 
 ## What This App Does
 
-* Primary purpose: manage direct Search dataset access for one member or team at a time.
+* Primary purpose: manage Search dataset access for one member or team at a time.
 * Key capabilities:
   * Switch between members and teams
   * Select a member or team and see every dataset
-  * See the current direct access level for each dataset
-  * Grant, change, or remove Read, Maintainer, and Admin access, then save the changes together
-  * Keep an access history of who changed which dataset, for which member or team, and which permissions were added or removed
-  * Optionally send a copy of each new access-history event to Cribl Lake
+  * See the current access level for each dataset
+  * Grant, change, or remove Read, Maintainer, and Admin access across multiple datasets, then save the changes together
+  * Keep an audit trail of every change, including who made it, which member or team it affected, which datasets changed, and which permissions were added or removed
+  * Optionally ship that audit trail to Cribl Lake using Direct Access
 * Intended users:
   * Search admins who share datasets
 * Works with:
@@ -25,16 +25,14 @@ Use this app to manage a member's or team's dataset access from one place instea
 
 ## When To Use This App
 
-* A member needs access added or removed across many datasets
-* A team’s dataset permissions need a single review
-* You want to confirm current direct access before changing it
+* A team or an individual member needs access added or removed across many datasets
 
 ## Before You Install
 
-* Required Cribl product or deployment type: Cribl.Cloud with Cribl Search. Dataset ACL APIs are Cloud-only.
-* Required permissions or roles: permission to list users and teams, and permission to read and modify Search dataset ACLs
-* Required external systems or APIs: none for dataset access management; optional Cribl Lake Direct Access or Lakehouse Raw HTTP endpoint for Lake shipping
-* Required configuration values: none for dataset access management; Lake shipping requires an ingest URL, an auth token, and an organization-specific External API Access entry
+* Required Cribl product or deployment type: Cribl.Cloud with Cribl Search. This app changes dataset access in Cribl.Cloud.
+* Required permissions or roles: permission to list users and teams, and permission to read and modify Search dataset access
+* Required external systems or APIs: none. Lakehouse Direct Access is optional and is used only to ship the audit trail to Cribl Lake.
+* Required configuration values: none for dataset access management. Lake shipping, if enabled, requires an ingest URL, an auth token, and an organization-specific External API Access entry.
 * Known limits or prerequisites: the signed-in user must be allowed to call the APIs declared in `config/policies.yml`
 
 ## Installation
