@@ -8,6 +8,18 @@ Search Dataset Access Manager gives Cribl Search administrators a bulk-edit work
 
 Use this app to manage a member's or team's dataset access from one place instead of updating each dataset individually.
 
+## Screenshots
+
+These examples use sample members, teams, and datasets.
+
+![A member selected, with access changes pending across several datasets](docs/screenshots/members-bulk-edit.png)
+
+![Confirmation before the selected member's access changes are saved](docs/screenshots/save-confirmation.png)
+
+![A team selected, with dataset access shown together](docs/screenshots/teams.png)
+
+![Audit history of saved access changes](docs/screenshots/access-history.png)
+
 ## What This App Does
 
 * Primary purpose: manage Search dataset access for one member or team at a time.
