@@ -138,26 +138,7 @@ try {
   await waitForText(page, 'Unsaved');
   await shoot(page, 'members-bulk-edit.png');
 
-  await clickText(page, 'Save access');
-  await waitForText(page, 'Update dataset access for Maya Chen');
-  await shoot(page, 'save-confirmation.png');
-  await page.keyboard.press('Escape');
-
-  const history = await page.$('section.history');
-  await history.screenshot({ path: resolve(outDir, 'access-history.png') });
-
-  await page.goto(baseUrl, { waitUntil: 'networkidle0' });
-  await waitForText(page, 'Maya Chen');
-  await clickText(page, 'Teams');
-  await waitForText(page, 'Security Operations');
-  await clickText(page, 'Security Operations');
-  await waitForText(page, 'Datasets for Security Operations');
-  await page.waitForFunction(() => {
-    const box = document.querySelector('[aria-label="Admin access for identity_signins"]');
-    return Boolean(box) && !box.hasAttribute('disabled') && box.getAttribute('aria-disabled') !== 'true';
-  });
-  await shoot(page, 'teams.png');
-  console.log(`Screenshots written to ${outDir}`);
+  console.log(`Screenshot written to ${outDir}`);
 } finally {
   await browser.close();
 }
