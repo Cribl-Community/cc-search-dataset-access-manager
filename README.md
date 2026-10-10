@@ -45,10 +45,10 @@ These examples use sample members, teams, and datasets.
 
 1. Log in to Cribl and then click on **Apps->View All**
 2. Click **Add App->Import from Git**.
-3. Paste `https://github.com/rplahn-netizen/cc-search-dataset-access-manager` and `latest` for the release tag.
+3. Paste `https://github.com/Cribl-Community/cc-search-dataset-access-manager` and `latest` for the release tag.
 4. Click **Import**.
 
-To install a specific version, use its release tag, such as `v1.0.16`, instead of `latest`.
+To install a specific version, use its release tag, such as `v1.0.17`, instead of `latest`.
 
 ### If Git Import Is Unavailable
 1. Go to the app's GitHub Releases page.
@@ -126,7 +126,7 @@ KV data is scoped to one installed app and shared by users of that installation.
 ## Support
 
 ### Community Built
-This app is a community contribution. It does not carry an official support commitment from Cribl. Questions and issues can be opened on [GitHub](https://github.com/rplahn-netizen/cc-search-dataset-access-manager/issues) or sent to rplahn@cribl.io.
+This app is a community contribution. It does not carry an official support commitment from Cribl. Questions and issues can be opened on [GitHub](https://github.com/Cribl-Community/cc-search-dataset-access-manager/issues) or sent to rplahn@cribl.io.
 
 ## Known Limitations
 
@@ -206,7 +206,7 @@ This app is licensed under the terms in [LICENSE](./LICENSE).
 | Author | Rob Plahn |
 | Support Model | community-built |
 | Support Label | Community Built |
-| Support Contact | [GitHub issues](https://github.com/rplahn-netizen/cc-search-dataset-access-manager/issues) |
+| Support Contact | [GitHub issues](https://github.com/Cribl-Community/cc-search-dataset-access-manager/issues) |
 | License | See LICENSE |
 | License File | [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0.txt) |
 | Product Tags | search, lake |
@@ -214,6 +214,6 @@ This app is licensed under the terms in [LICENSE](./LICENSE).
 | Audience | admin |
 | Availability | preview |
 | Requires External Access | only for optional Lake shipping |
-| Repository | [github.com/rplahn-netizen/cc-search-dataset-access-manager](https://github.com/rplahn-netizen/cc-search-dataset-access-manager) |
+| Repository | [github.com/Cribl-Community/cc-search-dataset-access-manager](https://github.com/Cribl-Community/cc-search-dataset-access-manager) |
 | Documentation | https://docs.cribl.io/search/ |
 | README Schema Version | 1.0 |
