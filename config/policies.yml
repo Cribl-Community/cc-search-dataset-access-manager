@@ -1,0 +1,19 @@
+# Product API access declaration. Declare Cribl product API paths your app needs to access.
+# At install time, admins see exactly which platform resources the app will use. These grants
+# apply app-wide, to both the frontend and every backend endpoint.
+
+policies:
+  - object: '/system/users'
+    actions: ['GET']
+  - object: '/system/teams'
+    actions: ['GET']
+  - object: '/system/teams/*'
+    actions: ['GET']
+  - object: '/products/search/users'
+    actions: ['GET']
+  - object: '/products/search/users/*'
+    actions: ['GET']
+  - object: '/m/:gid/search/datasets'
+    actions: ['GET']
+  - object: '/m/:gid/search/datasets/*'
+    actions: ['POST']

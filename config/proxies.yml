@@ -1,0 +1,57 @@
+# External API declaration. Declare domains your app needs to reach.
+# At install time, admins see exactly which endpoints the app will use.
+
+# api.example.com:
+#   paths:
+#     allowlist:
+#       - /v1/
+#       - /api/public/
+#     blocklist:
+#       - /v1/internal/
+#       - /api/admin/
+#   headers:
+#     inject:
+#       Authorization: '`Bearer ${kv.api_key}`'
+#       X-API-Version: '2024-01'
+#     allowlist:
+#       - Content-Type
+#       - x-request-id
+#       - x-*
+#     blocklist:
+#       - X-Sensitive-Header
+#       - Cookie
+#   timeout: 30000
+#   # Verify the upstream TLS certificate chain. Leave as `true` for production
+#   # endpoints. Set to `false` only when targeting trusted internal endpoints
+#   # that present self-signed or otherwise untrusted certificates.
+#   rejectUnauthorized: true
+
+# Lake ingest hosts are organization-specific and must not be packaged here.
+# The first-run setup derives the hostname:port and provides a copyable entry
+# for an administrator to append in App Settings > External API Access.
+
+# direct-access-example.cribl.cloud:10080:
+#   paths:
+#     allowlist:
+#       - /datasets/
+#   headers:
+#     inject:
+#       Authorization: kv.lakeIngestToken
+#     allowlist:
+#       - content-type
+#       - accept
+#   timeout: 30000
+#   rejectUnauthorized: true
+#
+# search.main.example.cribl.cloud:20000:
+#   paths:
+#     allowlist:
+#       - /
+#   headers:
+#     inject:
+#       Authorization: kv.lakeIngestToken
+#     allowlist:
+#       - content-type
+#       - accept
+#   timeout: 30000
+#   rejectUnauthorized: true

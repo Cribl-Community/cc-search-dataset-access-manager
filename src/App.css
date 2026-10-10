@@ -1,0 +1,152 @@
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  background: token('color.background.surface');
+  color: token('color.foreground.default');
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: token('spacing.lg');
+  min-height: 100vh;
+  padding: token('spacing.lg');
+}
+
+.page-header,
+.header-actions,
+.toolbar-row,
+.section-heading,
+.checkbox-cell {
+  display: flex;
+  align-items: center;
+}
+
+.page-header,
+.section-heading {
+  justify-content: space-between;
+  gap: token('spacing.md');
+}
+
+.page-intro,
+.section-copy {
+  display: flex;
+  flex-direction: column;
+  gap: token('spacing.xs');
+}
+
+.header-actions,
+.toolbar-row {
+  gap: token('spacing.sm');
+}
+
+.metrics,
+.workspace {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: token('spacing.md');
+}
+
+.metric {
+  grid-column: span 3;
+}
+
+.principals {
+  grid-column: span 4;
+}
+
+.datasets {
+  grid-column: span 8;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: token('spacing.md');
+  min-width: 0;
+}
+
+.table-scroll {
+  overflow: auto;
+  min-width: 0;
+}
+
+.principals .table-scroll,
+.datasets .table-scroll {
+  max-height: min(28rem, 45vh);
+}
+
+.history .table-scroll {
+  max-height: min(24rem, 40vh);
+}
+
+.change-list {
+  display: flex;
+  flex-direction: column;
+  gap: token('spacing.xs');
+  margin: 0;
+  padding-left: token('spacing.lg');
+}
+
+.setup-flow {
+  display: flex;
+  flex-direction: column;
+  gap: token('spacing.lg');
+}
+
+.setup-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: token('spacing.sm');
+}
+
+.setup-steps[data-count='2'] {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.setup-step {
+  border-bottom: token('border.default');
+  padding: token('spacing.sm');
+}
+
+.setup-step[data-active='true'] {
+  border-bottom-color: token('color.border.accent.default');
+}
+
+.setup-step[data-complete='true'] {
+  border-bottom-color: token('color.border.success.default');
+}
+
+.setup-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: token('spacing.md');
+}
+
+@media (max-width: 960px) {
+  .metric,
+  .principals,
+  .datasets {
+    grid-column: span 12;
+  }
+
+  .page-header,
+  .section-heading,
+  .toolbar-row {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .setup-steps,
+  .setup-steps[data-count='2'] {
+    grid-template-columns: 1fr;
+  }
+
+  .setup-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
